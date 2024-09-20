@@ -7,7 +7,8 @@ https://academy.langchain.com/
 ## Setup
 
 ### リポジトリのクローン
-```
+
+```bash
 git clone https://github.com/langchain-ai/langchain-academy.git
 $ cd langchain-academy
 ```
@@ -16,22 +17,25 @@ $ cd langchain-academy
 
 https://jupyter.org/install
 
-
 ### LangSmithのサインアップ
+
 https://smith.langchain.com/
 
 環境変数`LANGCHAIN_API_KEY`と`LANGCHAIN_TRACING_V2=true`を設定してください。
 
 ### OpenAIのAPIキーの設定
+
 https://openai.com/index/openai-api/
 [OpenAI APIの使い方](https://note.com/viva_eureka/n/ncec7d9837234#5d256f2a-697a-4407-a988-32270b9bfddf)
 
 ### Tavilyのサインアップ
+
 https://tavily.com/
 [Tavilyとは？](https://note.com/npaka/n/n9fe8a607c56e)
 
 ### 最終的には以下のような環境変数を設定してください
-```
+
+```bash
 OPENAI_API_KEY=sk-xxx
 TAVILY_API_KEY=tvly-xxx
 
@@ -41,7 +45,6 @@ LANGSMITH_API_KEY=lsv2_pt_xxx
 ```
 
 ## Q&Aなど（2024-09-17第一回）
-
 
 ## LangChain Academyのコース紹介動画
 
