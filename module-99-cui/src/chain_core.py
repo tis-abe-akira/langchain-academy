@@ -19,13 +19,13 @@ from langchain_openai import ChatOpenAI
 from pprint import pprint
 from langchain_core.messages import AIMessage, HumanMessage
 
-messages = [AIMessage(content=f"So you said you were researching ocean mammals?", name="Model")]
-messages.append(HumanMessage(content=f"Yes, that's right.",name="Lance"))
-messages.append(AIMessage(content=f"Great, what would you like to learn about.", name="Model"))
-messages.append(HumanMessage(content=f"I want to learn about the best place to see Orcas in the US. Describe in Japanese Language", name="Lance"))
+# messages = [AIMessage(content=f"So you said you were researching ocean mammals?", name="Model")]
+# messages.append(HumanMessage(content=f"Yes, that's right.",name="Lance"))
+# messages.append(AIMessage(content=f"Great, what would you like to learn about.", name="Model"))
+# messages.append(HumanMessage(content=f"I want to learn about the best place to see Orcas in the US. Describe in Japanese Language", name="Lance"))
 
-for m in messages:
-    m.pretty_print()
+# for m in messages:
+#     m.pretty_print()
 
 ##
 # Chat Models
@@ -46,14 +46,14 @@ _set_env("OPENAI_API_KEY")
 
 from langchain_openai import ChatOpenAI
 llm = ChatOpenAI(model="gpt-4o")
-result = llm.invoke(messages)
-print(f"戻り値の型: {type(result)}")
+# result = llm.invoke(messages)
+# print(f"戻り値の型: {type(result)}")
 
-print("\nResult: ")
-result.pretty_print()
+# print("\nResult: ")
+# result.pretty_print()
 
 # response_metadataを表示する
-print(f"\nResponse Metadata: {result.response_metadata}")
+# print(f"\nResponse Metadata: {result.response_metadata}")
 
 ## 
 # Tools
@@ -93,11 +93,11 @@ print(f"\ntool_call: {tool_call}")
 # 状態をMessagesStateとして定義しましょう。これは、単一のキーmessagesを持つTypedDictです。
 # messagesは、上記で定義したメッセージ（例: HumanMessageなど）のリストです。
 ##
-from typing_extensions import TypedDict
-from langchain_core.messages import AnyMessage
+# from typing_extensions import TypedDict
+# from langchain_core.messages import AnyMessage
 
-class MessagesState(TypedDict):
-    messages: list[AnyMessage]
+# class MessagesState(TypedDict):
+#     messages: list[AnyMessage]
 
 
 ##
@@ -114,11 +114,11 @@ class MessagesState(TypedDict):
 # これにより、任意のmessagesが既存のmessagesリストに追加されることが保証されます。
 # 単にmessagesキーをadd_messagesリデューサー関数でメタデータとして注釈するだけです。
 ##
-from typing import Annotated
-from langgraph.graph.message import add_messages
+# from typing import Annotated
+# from langgraph.graph.message import add_messages
 
-class MessagesState(TypedDict):
-    messages: Annotated[list[AnyMessage], add_messages]
+# class MessagesState(TypedDict):
+#     messages: Annotated[list[AnyMessage], add_messages]
 
 # グラフ状態でメッセージのリストを持つことは非常に一般的なので、LangGraphには事前に構築されたMessagesStateがあります！
 # MessagesStateは次のように定義されています:
@@ -134,24 +134,24 @@ class MessagesState(MessagesState):
 
 # もう少し深く掘り下げて、`add_messages`リデューサーが単独でどのように機能するかを見てみましょう。
 # Initial state
-initial_messages = [AIMessage(content="Hello! How can I assist you?", name="Model"),
-                    HumanMessage(content="I'm looking for information on marine biology.", name="Lance")
-                   ]
+# initial_messages = [AIMessage(content="Hello! How can I assist you?", name="Model"),
+#                     HumanMessage(content="I'm looking for information on marine biology.", name="Lance")
+#                    ]
 
-# New message to add
-new_message = AIMessage(content="Sure, I can help with that. What specifically are you interested in?", name="Model")
+# # New message to add
+# new_message = AIMessage(content="Sure, I can help with that. What specifically are you interested in?", name="Model")
 
-# Test
-added_messages = add_messages(initial_messages , new_message)
+# # Test
+# added_messages = add_messages(initial_messages , new_message)
 
-print(f"\nAdded messages: {added_messages}")
+# print(f"\nAdded messages: {added_messages}")
 
 
 ##
 # Our graph
 # では、MessagesStateをグラフで使用してみましょう。
 ##
-from IPython.display import Image, display
+# from IPython.display import Image, display
 from langgraph.graph import StateGraph, START, END
     
 # Node

@@ -186,6 +186,7 @@ for m in messages['messages']:
     # print("Attributes of m:", dir(m))
 
     # ツール呼び出しの結果を表示（GitHub Copilot Chatにてコード生成）
+    # TODO: 次のRouterのところできちんとツールの実行に対応する。ここでは強引に呼び出しをしているだけ。
     if hasattr(m, 'tool_calls'):
         for call in m.tool_calls:
             print("Tool Call:", call)
