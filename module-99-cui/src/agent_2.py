@@ -1,3 +1,4 @@
+from calendar import month
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -29,11 +30,12 @@ def amortization_calculation(principal: int, annual_interest_rate: float, num_pa
     return int(monthly_payment)
 
 @tool
-def net_present_value_calculation(cash_flows: list[int], discount_rate: float, start_month: int) -> int:
+def net_present_value_calculation(cash_flow: int, discount_rate: float, start_month: int, end_month: int) -> int:
     """Net present value calculation tool."""
     npv = 0
-    for i, cash_flow in enumerate(cash_flows):
-        npv += cash_flow / (1 + discount_rate) ** (i + start_month / 12)
+    monthly_rate = discount_rate / 1200
+    for t in range(start_month, end_month + 1):
+        npv += cash_flow / (1 + monthly_rate) ** t
     return int(npv)
 
 tools = [amortization_calculation, net_present_value_calculation]
