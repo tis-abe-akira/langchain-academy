@@ -21,7 +21,14 @@ from langchain_core.tools import tool
 
 @tool
 def amortization_calculation(principal: int, annual_interest_rate: float, num_payments: int) -> int:
-    """Amortization calculation tool."""
+    """Amortization calculation tool.
+    Args:
+        principal (int): Principal amount.
+        annual_interest_rate (float): Annual interest rate.
+        num_payments (int): Number of payments.
+    Returns:
+        int: Monthly payment.
+    """
     # 月利率の計算
     monthly_interest_rate = annual_interest_rate / 1200
     # 毎月の返済額を計算する式
@@ -31,7 +38,15 @@ def amortization_calculation(principal: int, annual_interest_rate: float, num_pa
 
 @tool
 def net_present_value_calculation(cash_flow: int, discount_rate: float, start_month: int, end_month: int) -> int:
-    """Net present value calculation tool."""
+    """Net present value calculation tool.
+    Args:
+        cash_flow (int): Cash flow.
+        discount_rate (float): Discount rate.
+        start_month (int): Start month.
+        end_month (int): End month.
+    Returns:
+        int: Net present value.
+    """
     npv = 0
     monthly_rate = discount_rate / 1200
     for t in range(start_month, end_month + 1):
