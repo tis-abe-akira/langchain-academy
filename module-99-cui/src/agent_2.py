@@ -1,3 +1,7 @@
+"""
+ファイナンス計算をツールとして持つエージェントを作成します。
+agent.pyをもとにしています。
+"""
 from calendar import month
 from dotenv import load_dotenv
 load_dotenv()
