@@ -2,8 +2,7 @@
 
 ## LangChain AcademyのURL
 
-https://academy.langchain.com/
-
+[https://academy.langchain.com/](https://academy.langchain.com/)
 ## Setup
 
 ### リポジトリのクローン
@@ -25,12 +24,12 @@ https://smith.langchain.com/
 
 ### OpenAIのAPIキーの設定
 
-https://openai.com/index/openai-api/
+[https://openai.com/index/openai-api/](https://openai.com/index/openai-api/)
 [OpenAI APIの使い方](https://note.com/viva_eureka/n/ncec7d9837234#5d256f2a-697a-4407-a988-32270b9bfddf)
 
 ### Tavilyのサインアップ
 
-https://tavily.com/
+[https://tavily.com/](https://tavily.com/)
 [Tavilyとは？](https://note.com/npaka/n/n9fe8a607c56e)
 
 ### 最終的には以下のような環境変数を設定してください
@@ -44,11 +43,14 @@ LANGCHAIN_PROJECT=LangGraphTutorial
 LANGSMITH_API_KEY=lsv2_pt_xxx
 ```
 
-## Q&Aなど（2024-09-17第一回）
+## Q&Aなど
+### 2024-09-17第一回
+- Q: LLMがツールを選択する際に、コメントなどを参照して判断している？
+- A: はい、コメントなどを参照して判断しています。ただし、関数名が適切であれば、コメントがなくてもツールを選択できます。
 
 ## LangChain Academyのコース紹介動画
 
-https://youtu.be/29XE10U6ooc?feature=shared
+[https://youtu.be/29XE10U6ooc?feature=shared](https://youtu.be/29XE10U6ooc?feature=shared)
 
 ### 字幕（翻訳）
 
