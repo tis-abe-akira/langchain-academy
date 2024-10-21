@@ -1,15 +1,18 @@
 from dotenv import load_dotenv
 load_dotenv()
 
-##
-# Review
-# TypedDict、Pydantic、またはデータクラスを含む、LangGraphの状態スキーマを定義するいくつかの異なる方法を説明しました。
-#
-# Goals
-# さて、リデューサーについて詳しく見ていきます。リデューサーは、状態スキーマ内の特定のキー/チャネルに対して状態更新がどのように行われるかを指定します。
+"""
+Review
+TypedDict、Pydantic、またはデータクラスを含む、LangGraphの状態スキーマを定義するいくつかの異なる方法を説明しました。
 
-# Default overwriting state
-# 状態スキーマとして`TypedDict`を使用しましょう。
+Goals
+さて、リデューサーについて詳しく見ていきます。リデューサーは、状態スキーマ内の特定のキー/チャネルに対して状態更新がどのように行われるかを指定します。
+"""
+
+"""
+Default overwriting state
+状態スキーマとして`TypedDict`を使用しましょう。
+"""
 from typing_extensions import TypedDict
 from IPython.display import Image, display
 from langgraph.graph import StateGraph, START, END
@@ -39,14 +42,16 @@ save_mermaid_to_html(graph.get_graph().draw_mermaid(), "out/2_2_state_reducers.h
 result = graph.invoke({"foo" : 1})
 print(result)
 
-# 状態更新を見てみましょう。{"foo": state['foo'] + 1}を返します。
-# 前述のように、デフォルトではLangGraphは状態を更新するための推奨方法を知りません。
-# そのため、node_1のfooの値を単に上書きします：
-# return {"foo": state['foo'] + 1}
-# {'foo': 1}を入力として渡すと、グラフから返される状態は{'foo': 2}です。
-#
-# Branching
-# ノードが分岐するケースを見てみましょう。
+"""
+状態更新を見てみましょう。{"foo": state['foo'] + 1}を返します。
+前述のように、デフォルトではLangGraphは状態を更新するための推奨方法を知りません。
+そのため、node_1のfooの値を単に上書きします：
+return {"foo": state['foo'] + 1}
+{'foo': 1}を入力として渡すと、グラフから返される状態は{'foo': 2}です。
+
+Branching
+ノードが分岐するケースを見てみましょう。
+"""
 
 class State(TypedDict):
     foo: int
@@ -89,20 +94,22 @@ try:
 except InvalidUpdateError as e:
     print(f"InvalidUpdateError occurred: {e}")
 
-# 問題が発生しました！
-# ノード1がノード2とノード3に分岐しています。
-# ノード2とノード3は並行して実行されるため、グラフの同じステップで実行されます。
-# 両方が同じステップ内で状態を上書きしようとします。
-# これはグラフにとって曖昧です！どの状態を保持すべきでしょうか？
+"""
+問題が発生しました！
+ノード1がノード2とノード3に分岐しています。
+ノード2とノード3は並行して実行されるため、グラフの同じステップで実行されます。
+両方が同じステップ内で状態を上書きしようとします。
+これはグラフにとって曖昧です！どの状態を保持すべきでしょうか？
 
-# Reducers
-#
-# リデューサーはこの問題に対処するための一般的な方法を提供します。
-# リデューサーは更新の方法を指定します。
-# Annotated型を使用してリデューサー関数を指定できます。
-# 例えば、この場合、上書きするのではなく、各ノードから返される値を追加してみましょう。
-# これを実行できるリデューサーが必要です：operator.addはPythonの組み込みoperatorモジュールの関数です。
-# operator.addをリストに適用すると、リストの連結が行われます。
+Reducers
+
+リデューサーはこの問題に対処するための一般的な方法を提供します。
+リデューサーは更新の方法を指定します。
+Annotated型を使用してリデューサー関数を指定できます。
+例えば、この場合、上書きするのではなく、各ノードから返される値を追加してみましょう。
+これを実行できるリデューサーが必要です：operator.addはPythonの組み込みoperatorモジュールの関数です。
+operator.addをリストに適用すると、リストの連結が行われます。
+"""
 from operator import add
 from typing import Annotated
 
@@ -131,8 +138,10 @@ save_mermaid_to_html(graph.get_graph().draw_mermaid(), "out/2_2_state_reducers-3
 result = graph.invoke({"foo" : [1]})
 print(result)
 
-# これで、状態キーfooはリストになります。
-# このoperator.addリデューサー関数は、各ノードからの更新をこのリストに追加します。
+"""
+これで、状態キーfooはリストになります。
+このoperator.addリデューサー関数は、各ノードからの更新をこのリストに追加します。
+"""
 def node_1(state):
     print("---Node 1---")
     return {"foo": [state['foo'][-1] + 1]}
@@ -169,17 +178,21 @@ save_mermaid_to_html(graph.get_graph().draw_mermaid(), "out/2_2_state_reducers-4
 result = graph.invoke({"foo" : [1]})
 print(result)
 
-# では、fooにNoneを渡した場合に何が起こるか見てみましょう。
-# リデューサーのoperator.addが、node_1でリストにNoneTypeを連結しようとするため、エラーが発生します。
+"""
+では、fooにNoneを渡した場合に何が起こるか見てみましょう。
+リデューサーのoperator.addが、node_1でリストにNoneTypeを連結しようとするため、エラーが発生します。
+"""
 try:
     graph.invoke({"foo" : None})
 except TypeError as e:
     print(f"TypeError occurred: {e}")
 
-# Custom Reducers
-#
-# このようなケースに対処するために、カスタムリデューサーを定義することもできます。
-# 例えば、リストを結合し、入力のいずれかまたは両方がNoneである場合を処理するカスタムリデューサーロジックを定義してみましょう。
+"""
+Custom Reducers
+
+このようなケースに対処するために、カスタムリデューサーを定義することもできます。
+例えば、リストを結合し、入力のいずれかまたは両方がNoneである場合を処理するカスタムリデューサーロジックを定義してみましょう。
+"""
 def reduce_list(left: list | None, right: list | None) -> list:
     """Safely combine two lists, handling cases where either or both inputs might be None.
 
@@ -250,16 +263,16 @@ except TypeError as e:
     print(f"TypeError occurred: {e}")
 
 
-##
-# Messages
-# 
-# モジュール1では、組み込みのリデューサーadd_messagesを使用して状態内のメッセージを処理する方法を示しました。
-# また、メッセージを操作したい場合に便利なショートカットとしてMessagesStateがあることも示しました。
-# - MessagesStateには組み込みのmessagesキーがあります
-# - また、このキーのための組み込みのadd_messagesリデューサーもあります
-# これら二つは同等です。
-# 簡潔にするために、langgraph.graphからMessagesStateクラスを使用します。
+"""
+Messages
 
+モジュール1では、組み込みのリデューサーadd_messagesを使用して状態内のメッセージを処理する方法を示しました。
+また、メッセージを操作したい場合に便利なショートカットとしてMessagesStateがあることも示しました。
+- MessagesStateには組み込みのmessagesキーがあります
+- また、このキーのための組み込みのadd_messagesリデューサーもあります
+これら二つは同等です。
+簡潔にするために、langgraph.graphからMessagesStateクラスを使用します。
+"""
 from typing import Annotated
 from langgraph.graph import MessagesState
 from langchain_core.messages import AnyMessage
@@ -297,12 +310,14 @@ result = add_messages(initial_messages , new_message)
 print(result)
 
 
-# add_messagesを使用すると、状態内のmessagesキーにメッセージを追加できることがわかります。
+"""
+add_messagesを使用すると、状態内のmessagesキーにメッセージを追加できることがわかります。
 
-# Re-writing
-#
-# add_messagesリデューサーを使用する際の便利なトリックをいくつか紹介します。
-# メッセージリスト内の既存のメッセージと同じIDを持つメッセージを渡すと、そのメッセージは上書きされます！
+Re-writing
+
+add_messagesリデューサーを使用する際の便利なトリックをいくつか紹介します。
+メッセージリスト内の既存のメッセージと同じIDを持つメッセージを渡すと、そのメッセージは上書きされます！
+"""
 # Initial state
 initial_messages = [AIMessage(content="Hello! How can I assist you?", name="Model", id="1"),
                     HumanMessage(content="I'm looking for information on marine biology.", name="Lance", id="2")
@@ -314,10 +329,12 @@ new_message = HumanMessage(content="I'm looking for information on whales, speci
 # Test
 print(add_messages(initial_messages , new_message))
 
-# Removal
-#
-# add_messagesはメッセージの削除も可能にします。
-# これには、langchain_coreからRemoveMessageを使用します。
+"""
+Removal
+
+add_messagesはメッセージの削除も可能にします。
+これには、langchain_coreからRemoveMessageを使用します。
+"""
 from langchain_core.messages import RemoveMessage
 
 # Message list
@@ -332,5 +349,7 @@ print(delete_messages)
 
 print(add_messages(messages, delete_messages))
 
-# delete_messagesで指定されたメッセージID 1と2がリデューサーによって削除されることがわかります。
-# これが実際にどのように機能するかは、後ほど確認します。
+"""
+delete_messagesで指定されたメッセージID 1と2がリデューサーによって削除されることがわかります。
+これが実際にどのように機能するかは、後ほど確認します。
+"""

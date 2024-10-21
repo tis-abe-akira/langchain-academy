@@ -3,6 +3,7 @@
 ## LangChain AcademyのURL
 
 [https://academy.langchain.com/](https://academy.langchain.com/)
+
 ## Setup
 
 ### リポジトリのクローン
