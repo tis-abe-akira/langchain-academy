@@ -10,8 +10,8 @@ https://academy.langchain.com/
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-1/router.ipynb)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-1/agent.ipynb)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-1/agent-memory.ipynb)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-1/state-schema.ipynb)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-1/state-reducers.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-2/state-schema.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-2/state-reducers.ipynb)
 
 
 ## Introduction
