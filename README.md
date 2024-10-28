@@ -4,24 +4,20 @@ https://academy.langchain.com/
 
 # Google Colabリンク
 
-## module-0
-- basics : [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-0/basics.ipynb)
-
-## module-1
-- Simple Graph : [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-1/simple-graph.ipynb)
-- Chain : [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-1/chain.ipynb)
-- Router : [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-1/router.ipynb)
-- Agent : [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-1/agent.ipynb)
-- Agent with Memory : [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-1/agent-memory.ipynb)
-
-## module-2
-- State Schema : [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-2/state-schema.ipynb)
-- State Reducers : [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-2/state-reducers.ipynb)
-- Multiple Schemas : [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-2/multiple-schemas.ipynb)
-- Trim and Filter Messages : [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-2/trim-filter-messages.ipynb)
-- Chatbot w/ Summarizing Messages and Memory : [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-2/chatbot-summarization.ipynb)
-- Chatbot w/ Summarizing Messages and External Memory : [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-2/chatbot-external-memory.ipynb)
-
+| Module   | Description                                                                 | Link                                                                                                      |
+|----------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| module-0 | basics                                                                      | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-0/basics.ipynb) |
+| module-1 | Simple Graph                                                                | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-1/simple-graph.ipynb) |
+| module-1 | Chain                                                                       | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-1/chain.ipynb) |
+| module-1 | Router                                                                      | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-1/router.ipynb) |
+| module-1 | Agent                                                                       | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-1/agent.ipynb) |
+| module-1 | Agent with Memory                                                           | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-1/agent-memory.ipynb) |
+| module-2 | State Schema                                                                | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-2/state-schema.ipynb) |
+| module-2 | State Reducers                                                              | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-2/state-reducers.ipynb) |
+| module-2 | Multiple Schemas                                                            | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-2/multiple-schemas.ipynb) |
+| module-2 | Trim and Filter Messages                                                    | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-2/trim-filter-messages.ipynb) |
+| module-2 | Chatbot w/ Summarizing Messages and Memory                                  | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-2/chatbot-summarization.ipynb) |
+| module-2 | Chatbot w/ Summarizing Messages and External Memory                         | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-2/chatbot-external-memory.ipynb) |
 
 ## Introduction
 
