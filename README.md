@@ -2,6 +2,18 @@
 
 https://academy.langchain.com/
 
+# Google Colabリンク
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-0/basics.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-1/simple-graph.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-1/chain.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-1/router.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-1/agent.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-1/agent-memory.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-1/state-schema.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-1/state-reducers.ipynb)
+
+
 ## Introduction
 
 Welcome to LangChain Academy! This is a growing set of modules focused on foundational concepts within the LangChain ecosystem. Module 0 is basic setup and Modules 1 - 4 focus on LangGraph, progressively adding more advanced themes. In each module folder, you'll see a set of notebooks. A video accompanies each notebook to guide you through the topic. Each module also has a `studio` subdirectory, with a set of relevant graphs that we will explore using the LangGraph API and Studio.
