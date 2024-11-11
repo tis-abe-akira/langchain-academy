@@ -18,6 +18,11 @@ https://academy.langchain.com/
 | module-2 | Trim and Filter Messages                                                    | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-2/trim-filter-messages.ipynb) |
 | module-2 | Chatbot w/ Summarizing Messages and Memory                                  | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-2/chatbot-summarization.ipynb) |
 | module-2 | Chatbot w/ Summarizing Messages and External Memory                         | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-2/chatbot-external-memory.ipynb) |
+| module-3 | Streaming                                                                   | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-3/streaming-interruption.ipynb) |
+| module-3 | Breakpoints                                                                 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-3/breakpoints.ipynb) |
+| module-3 | Editing State and Human Feedback                                            | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-3/edit-state-human-feedback.ipynb) |
+| module-3 | Dynamic Breakpoints                                                         | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-3/dynamic-breakpoints.ipynb) |
+| module-3 | Time Travel                                                                 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-3/time-travel.ipynb) |
 
 ## Introduction
 
