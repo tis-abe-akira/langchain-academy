@@ -23,6 +23,10 @@ https://academy.langchain.com/
 | module-3 | Editing State and Human Feedback                                            | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-3/edit-state-human-feedback.ipynb) |
 | module-3 | Dynamic Breakpoints                                                         | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-3/dynamic-breakpoints.ipynb) |
 | module-3 | Time Travel                                                                 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-3/time-travel.ipynb) |
+| module-4 | Parallelization                                                             | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-4/parallelization.ipynb) |
+| module-4 | Sub-graphs                                                                  | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-4/sub-graph.ipynb) |
+| module-4 | Map-reduce                                                                  | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-4/map-reduce.ipynb) |
+| module-4 | Research Assistant                                                          | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tis-abe-akira/langchain-academy/blob/main/module-4/research-assistant.ipynb) |
 
 ## Introduction
 
